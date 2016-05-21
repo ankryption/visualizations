@@ -1,0 +1,145 @@
+.titleLegend{
+	font-size: 14px;
+	font-family: Arial;
+	text-align: middle;
+}
+.totalBar{
+  fill:#EAEBEB;
+}
+.plannedBar{
+  fill: #5F2D2E;
+}
+.actualBar{
+	fill: #5F2D2E;
+}
+.highlighted{
+  stroke: #A5A5A5;
+  stroke-width: 1px;
+}
+.resizer{
+  cursor: ew-resize;
+  opacity:0; 
+}
+
+.xAxis path,
+.xAxis line {
+    fill: none;
+    stroke: black;
+}
+.plusSymbol circle{
+  cursor: pointer;
+}
+.plusSymbol line{
+  stroke: white;
+  stroke-width: 2;
+  stroke-opacity: 1;
+}
+.highlightSymbol {
+  cursor: pointer;
+}
+
+#tooltip {
+  position: absolute;
+  width: 140px;
+  height: auto;
+  padding: 10px;
+  background-color: black;
+/*  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);*/
+  pointer-events: none;
+}
+.tmapEle{
+    fill:none;
+}
+#tooltip.hidden {
+  display: none;
+}
+
+#tooltip p {
+  margin: 0;
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+}
+#t-tip{
+position:absolute;
+z-index:10;
+color: white;
+font-size: 13px;
+font-family: Arial;
+}
+.tt-item {
+    width: 100%;
+    padding: 2px;
+}
+span.tt-item-name {
+    margin-left: 5px;
+    font-size: 1em;
+}
+span.tt-item-color {
+    margin-top: 3px;
+    border-radius: 10px;
+}
+span.tt-item-price {
+    float: right;
+    margin-left: 10px;
+}
+.tt-combo{
+  font-weight: bold;
+}
+.tt-inner{
+background: #334450;
+width:auto;
+height:auto;
+padding-top:5px;
+padding-bottom:5px;
+padding-left:20px;
+padding-right:20px;
+border-radius: 1px;
+}
+
+#triangle{
+display: block;
+position: absolute;
+}
+#triangle.bottom{
+width: 0;
+height: 0;
+border-style: solid;
+border-width: 10px 9px 0px 9px;
+border-color: #334450 transparent transparent transparent;
+bottom: -10px;
+left: 45%;
+}
+#triangle.left{
+width: 0;
+height: 0;
+border-style: solid;
+border-width: 9px 10px 9px 0;
+border-color: transparent #334450 transparent transparent;
+left: -9px;
+float: left;
+top:40%; 
+}
+#triangle.top{
+width: 0;
+height: 0;
+border-style: solid;
+border-width: 0px 9px 10px 9px;
+border-color: transparent transparent #334450 transparent;
+top: -10px;
+left: 45%;
+}
+#triangle.right{
+width: 0;
+height: 0;  
+border-style: solid;  
+border-width: 9px 0 9px 10px;  
+border-color: transparent transparent transparent #334450;
+right: -9px;
+top: 40%;
+}

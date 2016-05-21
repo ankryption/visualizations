@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Loss of Sales Extension</title>
+        <!-- <<deps -->
+        <script type="text/javascript" src="../../sap.viz.ext.lossofsales/libs/require.js"></script>
+        <script type="text/javascript" src="../../sap.viz.ext.lossofsales/libs/d3.v2.js"></script>
+        <script type="text/javascript" src="../../sap.viz.ext.lossofsales/libs/jquery.js"></script>
+        
+        <script type="text/javascript" src="../../sap.viz.ext.lossofsales/libs/sap.viz.js"></script>
+
+        <!-- DO NOT CHANGE THE ORDER OF THE ABOVE SCRIPTS, OR INSERT ANYTHING BETWEEN THEM -->
+
+        <!-- deps>> -->
+        <script id="prepare" type="text/javascript">
+            // Create and initialize the extension in an requireJS manner
+             // Config the baseUrl for requireJS to find the specific module or file
+            requirejs.config({
+                 baseUrl : '../bundles/sap/viz/ext/lossofsales'
+            });
+            require([ 'lossofsales-bundle' ], function() {
+                //chart option
+                var chartPoperties = {
+                    
+                    title : {
+                        visible : true,
+                        text : "Chart Title",
+                        alignment : 'center',
+                    }, 
+                    'Loss of Sales Module': {
+                        borderColor: "none"
+                    },
+                    
+                };
+                 //dataset used by the chart
+                /*<<data*/
+                var data =     {
+                        "analysisAxis": [{
+                            "index": 1,
+                            "data": [{
+                                "type": "Dimension",
+                                "name": "item",
+                                "values": ["Kare", "Voomm", "Thoughtstorm", "Jaxspan", "Kimia", "Devpoint", "Meezzy", "Roodel", "Brainfire", "Meemm", "Flashdog", "Skinte", "Mydeo", "Oyonder", "Feedmix", "Avamba", "Jayo", "Livetube", "Zoomdog", "Plajo", "Gigabox", "Leexo", "InnoZ", "Youfeed", "Tagpad", "Lajo", "Realfire", "Eayo", "Browsebug", "Fadeo", "Myworks", "Tagopia", "Edgewire", "Dynabox", "BlogXS", "Jaloo", "Blogspan", "Zooveo", "Skilith", "Bluezoom", "Agivu", "Wikido", "Kwideo", "Jabberstorm", "Topicblab", "Devify", "Skajo", "Topiclounge", "Babbleopia", "LiveZ", "Pixonyx", "Yamia", "Yoveo", "Omba", "Yabox", "Dabtype", "Camido", "Shufflester", "Rhynoodle", "Twitterlist", "Zoomcast", "Janyx", "Trudeo", "Skippad", "Yakitri", "Meevee", "Aivee", "Kamba", "Zooxo", "Cogilith", "Gabcube", "Dynazzy", "Gigaclub", "Izio", "Dabvine", "Realmix", "Eabox", "Vidoo", "Mudo", "Jabbersphere", "Thoughtsphere", "Feedfish", "Fliptune", "Snaptags"]
+                            }]
+                        }],
+                        "measureValuesGroup": [{
+                            "index": 1,
+                            "data": [{
+                                "type": "Measure",
+                                "name": "actualStock",
+                                "values": [
+                                    [1200, 1500, 1400, 800, 225, 200, 200, 200, 1200, 1500, 1400, 800, 225, 200, 200, 1200, 1500, 1400, 800, 225, 200, 200, 200, 1200, 1500, 1400, 800, 225, 200, 200, 1500, 1400, 800, 225, 200, 200, 200, 1200, 1400, 800, 225, 200, 200, 1200, 1500, 225, 200, 200, 200, 1200, 800, 225, 200, 200, 1200, 1500, 1400, 800, 200, 1200, 1500, 1400, 225, 200, 200, 1200, 1400, 800, 225, 200, 1200, 1500, 800, 225, 200, 200, 1200, 1500, 1400, 800, 225, 200, 1200, 1500]
+                                ]
+                            }]
+                        }, {
+                            "index": 2,
+                            "data": [{
+                                "type": "Measure",
+                                "name": "forecastedStock",
+                                "values": [
+                                    [1450, 1550, 1810, 1800, 525, 500, 220, 500, 1450, 2000, 1810, 820, 525, 500, 500, 1450, 1550, 1810, 1800, 525, 500, 220, 500, 1450, 2000, 1810, 820, 525, 500, 500, 1550, 1810, 1800, 525, 500, 220, 500, 1450, 1810, 820, 525, 500, 500, 1450, 1550, 525, 500, 220, 500, 1450, 820, 525, 500, 500, 1450, 1550, 1810, 1800, 220, 1450, 2000, 1810, 525, 500, 500, 1450, 1810, 1800, 525, 500, 1450, 2000, 820, 525, 500, 500, 1450, 1550, 1810, 1800, 525, 500, 1450, 2000]
+                                ]
+                            }]
+                        }, {
+                            "index": 3,
+                            "data": [{
+                                "type": "Measure",
+                                "name": "actualSale",
+                                "values": [
+                                    [1200000, 1500000, 1200000, 1700000, 500000, 400000, 650000, 650000, 1200000, 1500000, 1400000, 1700000, 700000, 650000, 650000, 1200000, 1500000, 1200000, 1700000, 500000, 400000, 650000, 650000, 1200000, 1500000, 1400000, 1700000, 700000, 650000, 650000, 1500000, 1200000, 1700000, 500000, 400000, 650000, 650000, 1200000, 1400000, 1700000, 700000, 650000, 650000, 1200000, 1500000, 500000, 400000, 650000, 650000, 1200000, 1700000, 700000, 650000, 650000, 1200000, 1500000, 1200000, 1700000, 650000, 1200000, 1500000, 1400000, 700000, 650000, 650000, 1200000, 1200000, 1700000, 500000, 400000, 1200000, 1500000, 1700000, 700000, 650000, 650000, 1200000, 1500000, 1200000, 1700000, 500000, 650000, 1200000, 1500000]
+                                ]
+                            }]
+                        }, {
+                            "index": 4,
+                            "data": [{
+                                "type": "Measure",
+                                "name": "forecastedSale",
+                                "values": [
+                                    [1400000, 1900000, 1750000, 2700000, 1000000, 900000, 900000, 900000, 1400000, 1900000, 1750000, 2700000, 1000000, 900000, 900000, 1400000, 1900000, 1750000, 2700000, 1000000, 900000, 900000, 900000, 1400000, 1900000, 1750000, 2700000, 1000000, 900000, 900000, 1900000, 1750000, 2700000, 1000000, 900000, 900000, 900000, 1400000, 1750000, 2700000, 1000000, 900000, 900000, 1400000, 1900000, 1000000, 900000, 900000, 900000, 1400000, 2700000, 1000000, 900000, 900000, 1400000, 1900000, 1750000, 2700000, 900000, 1400000, 1900000, 1750000, 1000000, 900000, 900000, 1400000, 1750000, 2700000, 1000000, 900000, 1400000, 1900000, 2700000, 1000000, 900000, 900000, 1400000, 1900000, 1750000, 2700000, 1000000, 900000, 1400000, 1900000]
+                                ]
+                            }]
+                        }]
+                    };
+               var ds = new sap.viz.api.data.CrosstableDataset(); 
+                ds.data(data);
+                /*data>>*/
+                
+                function onTplLoad() {
+                    //create chart after applying template
+                    /*<<create*/
+                     try {
+                        var chart = sap.viz.api.core.createViz({
+                            type : 'sap.viz.ext.lossofsales',
+                            data : ds,
+                            container : $("#chart"),
+                            properties : chartPoperties,
+                        });
+                    } catch (err) {
+                        console.log(err);
+                        return;
+                    }
+                    /*create>>*/
+                    //listen the barData event raised from the extension
+                    chart.on("barData", function(d) {
+                        alert("Data: " + d.join(" = "));
+                    });
+                    $(window).resize(function(){
+                        chart.size({
+                            width: $("#chart").width(),
+                            height: $("#chart").height()
+                        })
+                    });
+                };
+                function onTplFail() {
+                };
+                // set template loadPath
+                /*<<template*/
+                sap.viz.api.env.Resource.path("sap.viz.api.env.Template.loadPaths", ["../bundles/sap/viz/ext/lossofsales/sap_viz_ext_lossofsales-src/resources/templates"]);
+                sap.viz.api.env.Template.set("sample", onTplLoad, onTplFail);
+                    /*template>>*/
+            });
+        </script>
+    </head>
+    <body>
+        <!-- <<container -->
+        <div id="chart" style="position: absolute; left:0px; right: 0px; top:0px; bottom:0px; background-color: #ffffff"></div>
+        <!-- container>> -->
+    </body>
+</html>    
+    

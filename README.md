@@ -1,8 +1,7 @@
 What is it?
 -----------
 
-SAP
-Lumira is SAP’s self-service analytics and visualization tool. SAP Lumira can
+SAP Lumira is SAP’s self-service analytics and visualization tool. SAP Lumira can
 be downloaded as a personal edition for free from saplumira.com (or purchased
 for enterprise usage). It allows to import data (local, DB, BI and more),
 prepare and cleanse it, visualize and finally publish & share the data in
@@ -17,59 +16,24 @@ copied into the folder structure of an SAP Lumira installation (desktop or
 server), and can then be used.
 
 
-Try it!
+List of visualization extensions in the repo
 -----------
 
-Check out our SAP Lumira Visualization Extension Library. This library contains custom visualizations developed in SAP Lumira SDK. 
+### Affinity
+![Affinity](https://github.com/SAP/lumira-extension-viz/blob/master/Affinity/affinity.gif)
 
-List of current visualization extensions in the repo
+### Drillable KPI Tree
+![Drillable KPI Tree](https://github.com/SAP/lumira-extension-viz/blob/master/Drillable_KPI_Tree/kpi_tree.PNG)
 
-* 3D World 
-* Affinity
-* Bitcoins
-* Bullet Chart
-* Business Bubbles
-* Capacity Planning Chart
-* Chord Chart
-* CompaRatio Chart
-* Competition Chart
-* Country Visas (Chart with Tooltip and Image)
-* Custom Choropleth Map of Japan
-* Drillable KPI Tree
-* Dynabars
-* Exoplanets
-* Extended Bar Chart
-* Extended Bubble Matrix
-* Football Heatmap
-* Force Diagram
-* Forecast with 2 Confidence Intervals
-* Forecast with Single Confidence Interval
-* Gauges
-* Geo Maps Leaflet
-* Google Maps Heatmap
-* Hello World
-* Holt-Winters Exponential Smoothing
-* Horizontal Mean Point Bar Chart
-* Interactive Bullet Chart
-* IoT Data Integrator and Visualization
-* Line Chart with Zoom
-* Loss of Sales
-* Loss Incident Optimization
-* Mini Charts
-* Pipeline Bubble
-* Population Pyramid Chart
-* Power Flow Maps
-* Quadrant
-* SWOT Analysis
-* Sample Bar Chart
-* Sankey Diagram (based on Google visualization API)
-* Scrollable Timeline Chart
-* Sortable Stacked Bars Chart
-* Stacked Column with Line Chart
-* Sunburst Clock Chart
-* Sunburst Sequence
-* Sunburst Zoomable Wheel
-* Tubble Chart
+### Loss of Sales
+![Loss of Sales](https://github.com/SAP/lumira-extension-viz/blob/master/Loss_of_Sales/LossOfSales.PNG)
+
+### Interactive Bullet Chart
+![Interactive Bullet Chart](https://github.com/SAP/lumira-extension-viz/blob/master/Interactive_Bullet_Chart/InteractiveBulletChart.gif)
+
+### Loss Incident Optimization
+![Loss Incident Optimization](https://github.com/SAP/lumira-extension-viz/blob/master/Loss_Incident_Optimization/LossIncidentOptimization.PNG)
+
 
 Get it!
 -----------
